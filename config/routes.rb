@@ -1,7 +1,6 @@
 Feedback::Application.routes.draw do
+  devise_for :users
   resources :submissions
-
-  resources :users
 
   root to:'submissions#new'
 
