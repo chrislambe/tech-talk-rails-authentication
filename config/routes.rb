@@ -1,5 +1,8 @@
 Feedback::Application.routes.draw do
-  devise_for :users
+  devise_for :users, 
+    skip: :registrations, 
+    controllers: {omniauth_callbacks: 'omniauth_callbacks'}
+
   resources :submissions
 
   root to:'submissions#new'
