@@ -21,6 +21,9 @@ gem 'haml-rails', '~> 0.5.3'
 # Devise for authentication!
 gem 'devise', '~> 3.2.2'
 
+# Omniauth strategy for Google's OAuth 2.0
+gem 'omniauth-google-oauth2', '~> 0.2.2'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
