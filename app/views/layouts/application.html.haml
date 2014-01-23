@@ -10,6 +10,12 @@
       %p.alert= alert
 
       %ul
-        %li= link_to "Submissions", submissions_path
+        - if signed_in?
+          %li= link_to "Submissions", submissions_path
+          %li
+            Hello, #{current_user.name}! Want to #{link_to "sign out", destroy_user_session_path, method: :delete} or #{link_to "edit your profile", edit_user_registration_path}?
+        - else
+          %li= link_to "Sign up", new_user_registration_path
+          %li= link_to "Sign in", new_user_session_path
 
       = yield
